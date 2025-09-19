@@ -20,10 +20,10 @@ function FeatureItem({ text, muted = false }: Feature) {
   )
 }
 
-type Currency = "USD"
+type Currency = "CAD"
 
 const PRICES: Record<Currency, { starter: string; professional: string; enterprise: string; save: string }> = {
-  USD: {
+  CAD: {
     starter: "$2,999",
     professional: "$5,999",
     enterprise: "$12,999",
@@ -57,7 +57,7 @@ const enterpriseExamples = [
 
 export function Pricing() {
   const [openPlan, setOpenPlan] = useState<null | "Starter" | "Professional" | "Enterprise">(null)
-  const [currency, setCurrency] = useState<Currency>("USD")
+  const [currency, setCurrency] = useState<Currency>("CAD")
 
   return (
     <section id="pricing" className="text-white" itemScope itemType="https://schema.org/PriceSpecification">

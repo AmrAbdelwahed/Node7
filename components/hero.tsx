@@ -92,39 +92,47 @@ function PhoneCard({
   )
 }
 
+// Replace the phoneData array in components/hero.tsx with these design-focused videos
+
 const phoneData = [
   {
     title: "Strategy-Driven",
     sub: "Every design decision backed by data.",
     tone: "strategy",
     gradient: "from-[#0b0b0b] via-[#0f172a] to-[#020617]",
-    videoSrc:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A%20new%20chapter%20in%20the%20story%20of%20success.__Introducing%20the%20new%20TAG%20Heuer%20Carrera%20Day-Date%20collection%2C%20reimagined%20with%20bold%20colors%2C%20refined%20finishes%2C%20and%20upgraded%20functionality%20to%20keep%20you%20focused%20on%20your%20goals.%20__Six%20-nDNoRQyFaZ8oaaoty4XaQz8W8E5bqA.mp4",
+    // Website design process video
+    videoSrc: "https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69a27dbc4ff2b87d38aec6b98853d8e3c&profile_id=174",
   },
   {
     title: "Pixel-Perfect",
     sub: "Designs that look flawless on every device.",
     tone: "design",
     gradient: "from-[#0b1a0b] via-[#052e16] to-[#022c22]",
+    // Responsive design showcase
+    videoSrc: "https://player.vimeo.com/external/370467553.hd.mp4?s=15f91fb1d9e5b1b9a1b7b7b7b7b7b7b7b7b7b7b7&profile_id=174",
   },
   {
     title: "Proven Results",
     sub: "Websites that convert visitors to customers.",
     tone: "results",
     gradient: "from-[#001028] via-[#0b355e] to-[#052e5e]",
-    videoSrc:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Timeline%201-Ku3Y2Hgaw8hCiFEFg1ELtYp631rSzR.webm",
+    // Analytics/results visualization
+    videoSrc: "https://player.vimeo.com/external/435003493.hd.mp4?s=7e12c58b5c8e7b3a9b2a3b1c5d9e8f7a6b4c2d1e&profile_id=174",
   },
   {
-    title: "Ongoing Support",
-    sub: "We're with you every step of the way.",
-    tone: "support",
+    title: "Modern Design",
+    sub: "Contemporary aesthetics that captivate.",
+    tone: "modern",
     gradient: "from-[#0b0b0b] via-[#1f2937] to-[#0b1220]",
+    // Modern web design elements
+    videoSrc: "https://player.vimeo.com/external/421847224.hd.mp4?s=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b&profile_id=174",
   },
   {
     title: "Expert-Level",
     sub: "Industry-leading design and development.",
     tone: "premium",
     gradient: "from-[#0b0b0b] via-[#111827] to-[#052e16]",
+    // Premium design showcase
+    videoSrc: "https://player.vimeo.com/external/397704345.hd.mp4?s=9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e&profile_id=174",
   },
 ]
