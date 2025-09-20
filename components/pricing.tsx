@@ -24,9 +24,9 @@ type Currency = "CAD"
 
 const PRICES: Record<Currency, { starter: string; professional: string; enterprise: string; save: string }> = {
   CAD: {
-    starter: "$2,999",
-    professional: "$5,999",
-    enterprise: "$12,999",
+    starter: "$2,500–$3,500",
+    professional: "$4,500–$6,500",
+    enterprise: "$7,500–$10,000",
     save: "Most Popular",
   },
 }
@@ -40,19 +40,19 @@ const starterExamples = [
 ]
 
 const professionalExamples = [
-  "ecommerce-platform",
-  "saas-application-site",
+  "dashboard-lite",
+  "crm-lite-system",
+  "booking-sync",
   "corporate-website",
   "agency-portfolio",
-  "tech-startup-site",
 ]
 
 const enterpriseExamples = [
-  "enterprise-platform",
-  "multi-brand-website",
-  "custom-web-application",
-  "large-scale-ecommerce",
-  "enterprise-portal",
+  "full-crm-platform",
+  "multi-user-backend",
+  "integrations-suite",
+  "enterprise-dashboard",
+  "advanced-portal",
 ]
 
 export function Pricing() {
@@ -67,13 +67,13 @@ export function Pricing() {
             className="mx-auto mb-4 inline-flex items-center rounded-full px-3 py-1 text-xs font-medium"
             style={{ backgroundColor: "rgba(198,255,58,0.12)", color: ACCENT }}
           >
-            Our Website Design Packages
+            Our Website & CRM Packages
           </div>
           <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl" itemProp="name">
-            Investment in Your Success.
+            Investment in Your Digital Success.
           </h2>
           <p className="mx-auto mt-2 max-w-xl text-sm text-neutral-400" itemProp="description">
-            Transparent pricing. Premium results. Websites that drive real business growth.
+            Not just websites — complete systems that run your business online.
           </p>
           <div className="mt-6">
             <Button
@@ -88,6 +88,7 @@ export function Pricing() {
           </div>
         </div>
 
+        {/* Starter */}
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           <Card
             className="relative overflow-hidden rounded-2xl liquid-glass shadow-[0_12px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
@@ -102,7 +103,7 @@ export function Pricing() {
                 <div className="text-xl font-bold tracking-tight" itemProp="price">
                   {PRICES[currency].starter}
                 </div>
-                <span className="pb-0.5 text-[11px] text-neutral-400">one-time</span>
+                <span className="pb-0.5 text-[11px] text-neutral-400">project</span>
                 <meta itemProp="priceCurrency" content={currency} />
               </div>
               <div className="flex gap-2">
@@ -111,11 +112,7 @@ export function Pricing() {
                   onClick={() => setOpenPlan("Starter")}
                   onTouchStart={() => setOpenPlan("Starter")}
                   className="flex-1 rounded-full px-4 py-2 text-sm font-medium transition-colors"
-                  style={{
-                    backgroundColor: "#0a0a0a",
-                    color: "#ffffff",
-                    border: "1px solid #333",
-                  }}
+                  style={{ backgroundColor: "#0a0a0a", color: "#ffffff", border: "1px solid #333" }}
                 >
                   View Portfolio
                 </Button>
@@ -128,14 +125,14 @@ export function Pricing() {
                 </Button>
               </div>
             </CardHeader>
-
             <CardContent className="pt-0">
               <ul className="grid gap-2" itemProp="description">
                 {[
-                  "Custom 5-page website",
-                  "Mobile-responsive design",
-                  "Basic SEO optimization",
-                  "Contact form integration",
+                  "Custom Next.js + Tailwind website (5 pages)",
+                  "Landing, Services, About, Reviews, FAQs, Contact",
+                  "Calendly booking integration (with reminders & cancellations)",
+                  "Mobile-optimized & SEO-friendly",
+                  "Basic Google Analytics setup",
                   "2 rounds of revisions",
                   "2-week delivery",
                 ].map((f, i) => (
@@ -146,6 +143,7 @@ export function Pricing() {
             <CardFooter />
           </Card>
 
+          {/* Professional */}
           <Card
             className="relative overflow-hidden rounded-2xl liquid-glass shadow-[0_12px_40px_rgba(0,0,0,0.3)] transition-all duration-300"
             itemScope
@@ -157,7 +155,6 @@ export function Pricing() {
             >
               {PRICES[currency].save}
             </div>
-
             <CardHeader className="space-y-3 pb-4">
               <div className="text-sm font-semibold text-neutral-200" itemProp="name">
                 Professional
@@ -166,21 +163,16 @@ export function Pricing() {
                 <div className="text-xl font-bold tracking-tight" itemProp="price">
                   {PRICES[currency].professional}
                 </div>
-                <span className="pb-0.5 text-[11px] text-neutral-400">one-time</span>
+                <span className="pb-0.5 text-[11px] text-neutral-400">project</span>
                 <meta itemProp="priceCurrency" content={currency} />
               </div>
-
               <div className="flex gap-2">
                 <Button
                   type="button"
                   onClick={() => setOpenPlan("Professional")}
                   onTouchStart={() => setOpenPlan("Professional")}
                   className="flex-1 rounded-full px-4 py-2 text-sm font-medium transition-colors"
-                  style={{
-                    backgroundColor: "#0a0a0a",
-                    color: "#ffffff",
-                    border: "1px solid #333",
-                  }}
+                  style={{ backgroundColor: "#0a0a0a", color: "#ffffff", border: "1px solid #333" }}
                 >
                   View Portfolio
                 </Button>
@@ -193,15 +185,16 @@ export function Pricing() {
                 </Button>
               </div>
             </CardHeader>
-
             <CardContent className="pt-0">
               <ul className="grid gap-2" itemProp="description">
                 {[
-                  "Custom 10-page website",
-                  "Advanced animations & interactions",
-                  "Conversion optimization",
-                  "Advanced SEO setup",
-                  "CMS integration",
+                  "Everything in Starter",
+                  "Backend CRM Lite (manage bookings, leads, messages)",
+                  "Customer database & booking history",
+                  "Email/SMS notifications",
+                  "Google Calendar sync",
+                  "Performance optimization (Lighthouse >90)",
+                  "Enhanced UI animations",
                   "3 rounds of revisions",
                   "3-week delivery",
                 ].map((f, i) => (
@@ -212,20 +205,21 @@ export function Pricing() {
             <CardFooter />
           </Card>
 
+          {/* Enterprise */}
           <Card
             className="relative overflow-hidden rounded-2xl liquid-glass-enhanced shadow-[0_16px_50px_rgba(0,0,0,0.4)] transition-all duration-300"
             itemScope
             itemType="https://schema.org/Offer"
           >
-            <CardHeader className="relative space-y-3 pb-4">
+            <CardHeader className="space-y-3 pb-4">
               <div className="text-sm font-semibold text-neutral-200" itemProp="name">
-                Enterprise
+                Premium
               </div>
               <div className="flex items-end gap-2 text-white">
                 <div className="text-xl font-bold tracking-tight" itemProp="price">
                   {PRICES[currency].enterprise}
                 </div>
-                <span className="pb-0.5 text-[11px] text-neutral-400">one-time</span>
+                <span className="pb-0.5 text-[11px] text-neutral-400">project</span>
                 <meta itemProp="priceCurrency" content={currency} />
               </div>
               <div className="flex gap-2">
@@ -234,11 +228,7 @@ export function Pricing() {
                   onClick={() => setOpenPlan("Enterprise")}
                   onTouchStart={() => setOpenPlan("Enterprise")}
                   className="flex-1 rounded-full px-4 py-2 text-sm font-medium transition-colors"
-                  style={{
-                    backgroundColor: "#0a0a0a",
-                    color: "#ffffff",
-                    border: "1px solid #333",
-                  }}
+                  style={{ backgroundColor: "#0a0a0a", color: "#ffffff", border: "1px solid #333" }}
                 >
                   View Portfolio
                 </Button>
@@ -251,22 +241,21 @@ export function Pricing() {
                 </Button>
               </div>
             </CardHeader>
-
-            <CardContent className="relative pt-0">
+            <CardContent className="pt-0">
               <ul className="grid gap-2" itemProp="description">
                 {[
-                  "Unlimited pages & features",
-                  "Custom web application",
-                  "Advanced integrations",
-                  "Performance optimization",
-                  "Ongoing support & maintenance",
+                  "Everything in Professional",
+                  "Full CRM backend with multi-user login & roles",
+                  "Lead management & customer service history",
+                  "Exportable reports (CSV/Excel)",
+                  "Automated follow-ups (reminders, promotions)",
+                  "Optional integrations (QuickBooks, Twilio, Stripe)",
+                  "Deployed on scalable hosting (Vercel + API backend)",
+                  "12 months priority support & maintenance",
                   "Unlimited revisions",
-                  "4-6 week delivery",
+                  "4–6 week delivery",
                 ].map((f, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4" style={{ color: ACCENT }} />
-                    <span className="text-sm text-neutral-200">{f}</span>
-                  </li>
+                  <FeatureItem key={i} text={f} />
                 ))}
               </ul>
             </CardContent>
@@ -275,6 +264,7 @@ export function Pricing() {
         </div>
       </div>
 
+      {/* Portfolio dialogs */}
       <ExamplesDialog
         open={openPlan === "Starter"}
         onOpenChange={(v) => setOpenPlan(v ? "Starter" : null)}
@@ -292,7 +282,7 @@ export function Pricing() {
       <ExamplesDialog
         open={openPlan === "Enterprise"}
         onOpenChange={(v) => setOpenPlan(v ? "Enterprise" : null)}
-        planName="Enterprise Package"
+        planName="Premium Package"
         price={PRICES[currency].enterprise}
         videoIds={enterpriseExamples}
       />
