@@ -7,27 +7,26 @@ import Image from "next/image"
 export function LogoMarquee() {
   const [pausedRow, setPausedRow] = useState<string | null>(null)
 
-  // Logo data with colors and content
   const logos = [
-    { name: "Intel", content: "intel", color: "text-neutral-300" },
-    { name: "MongoDB", content: "🟢", color: "text-green-500" },
-    { name: "Skitbit", content: "image", color: "text-neutral-300", image: "/images/skitbit-subtle-logo.png" },
-    { name: "VK", content: "VK", color: "text-white", bg: "bg-blue-500" },
-    { name: "TechCrunch", content: "TC", color: "text-neutral-300" },
-    { name: "MailChimp", content: "🐵", color: "text-yellow-500" },
-    { name: "ESJ", content: "image", color: "text-neutral-300", image: "/images/esj-subtle-logo.png" },
-    { name: "Kickstarter", content: "K", color: "text-white", bg: "bg-green-500" },
+    { name: "TechFlow", content: "TF", color: "text-neutral-300", bg: "bg-blue-600" },
+    { name: "GreenLeaf", content: "🌿", color: "text-green-500" },
+    { name: "UrbanStyle", content: "US", color: "text-white", bg: "bg-purple-600" },
+    { name: "FitLife", content: "FL", color: "text-white", bg: "bg-orange-500" },
+    { name: "CloudSync", content: "☁️", color: "text-blue-400" },
+    { name: "ArtSpace", content: "AS", color: "text-white", bg: "bg-pink-500" },
+    { name: "EcoTech", content: "ET", color: "text-white", bg: "bg-green-600" },
+    { name: "DataViz", content: "DV", color: "text-white", bg: "bg-indigo-600" },
   ]
 
   const secondRowLogos = [
-    { name: "StumbleUpon", content: "🔴", color: "text-red-500" },
-    { name: "Microsoft", content: "⊞", color: "text-neutral-400" },
-    { name: "CleanMyMac", content: "🌈", color: "text-purple-400" },
-    { name: "Google", content: "G", color: "text-neutral-300" },
-    { name: "Behance", content: "Be", color: "text-white", bg: "bg-blue-500" },
-    { name: "Apple", content: "🍎", color: "text-neutral-300" },
-    { name: "TransferWise", content: "✓", color: "text-white", bg: "bg-green-500" },
-    { name: "Medium", content: "M", color: "text-neutral-300" },
+    { name: "HealthHub", content: "HH", color: "text-white", bg: "bg-red-500" },
+    { name: "FinanceFlow", content: "💰", color: "text-yellow-500" },
+    { name: "EduPlatform", content: "EP", color: "text-white", bg: "bg-blue-700" },
+    { name: "FoodieApp", content: "🍽️", color: "text-orange-400" },
+    { name: "TravelGuide", content: "TG", color: "text-white", bg: "bg-teal-600" },
+    { name: "MusicStream", content: "🎵", color: "text-purple-400" },
+    { name: "ShopEasy", content: "SE", color: "text-white", bg: "bg-emerald-600" },
+    { name: "WorkSpace", content: "WS", color: "text-white", bg: "bg-gray-600" },
   ]
 
   const LogoCard = ({ logo, rowId }: { logo: any; rowId: string }) => (
@@ -36,7 +35,7 @@ export function LogoMarquee() {
       onMouseEnter={() => setPausedRow(rowId)}
       onMouseLeave={() => setPausedRow(null)}
     >
-      <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center">
+      <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300">
         {logo.image ? (
           <div className="relative w-16 h-8 sm:w-20 sm:h-10 lg:w-24 lg:h-12">
             <Image
@@ -64,12 +63,18 @@ export function LogoMarquee() {
         {/* Header */}
         <div className="flex flex-col items-center justify-between mb-12 sm:flex-row sm:items-center">
           <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl text-center sm:text-left">
-            Meet our <span className="text-lime-300">top-tier</span>
+            Trusted by <span className="text-lime-300">growing</span>
             <br />
-            customers
+            businesses
           </h2>
-          <Button variant="outline" className="mt-4 sm:mt-0 liquid-glass hover:liquid-glass-enhanced bg-transparent">
-            Learn More
+          <Button
+            asChild
+            variant="outline"
+            className="mt-4 sm:mt-0 liquid-glass hover:liquid-glass-enhanced bg-transparent"
+          >
+            <a href="https://calendly.com/amrabdelwahed00/30min" target="_blank" rel="noopener noreferrer">
+              Book Free Consultation
+            </a>
           </Button>
         </div>
 

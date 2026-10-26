@@ -5,7 +5,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { CheckCircle2 } from "lucide-react"
-import { ExamplesDialog } from "./examples-dialog"
 
 type Feature = { text: string; muted?: boolean }
 
@@ -107,7 +106,7 @@ export function Pricing() {
                 <meta itemProp="priceCurrency" content={currency} />
               </div>
               <div className="flex gap-2">
-                <Button
+                {/* <Button
                   type="button"
                   onClick={() => setOpenPlan("Starter")}
                   onTouchStart={() => setOpenPlan("Starter")}
@@ -115,7 +114,7 @@ export function Pricing() {
                   style={{ backgroundColor: "#0a0a0a", color: "#ffffff", border: "1px solid #333" }}
                 >
                   View Portfolio
-                </Button>
+                </Button> */}
                 <Button
                   asChild
                   className="flex-1 rounded-full px-4 py-2 text-sm font-medium text-black shadow transition-[box-shadow,transform,filter] active:translate-y-[1px]"
@@ -167,7 +166,7 @@ export function Pricing() {
                 <meta itemProp="priceCurrency" content={currency} />
               </div>
               <div className="flex gap-2">
-                <Button
+                {/* <Button
                   type="button"
                   onClick={() => setOpenPlan("Professional")}
                   onTouchStart={() => setOpenPlan("Professional")}
@@ -175,7 +174,7 @@ export function Pricing() {
                   style={{ backgroundColor: "#0a0a0a", color: "#ffffff", border: "1px solid #333" }}
                 >
                   View Portfolio
-                </Button>
+                </Button> */}
                 <Button
                   asChild
                   className="flex-1 rounded-full px-4 py-2 text-sm font-medium text-black shadow transition-[box-shadow,transform,filter] active:translate-y-[1px]"
@@ -223,7 +222,7 @@ export function Pricing() {
                 <meta itemProp="priceCurrency" content={currency} />
               </div>
               <div className="flex gap-2">
-                <Button
+                {/* <Button
                   type="button"
                   onClick={() => setOpenPlan("Enterprise")}
                   onTouchStart={() => setOpenPlan("Enterprise")}
@@ -231,7 +230,7 @@ export function Pricing() {
                   style={{ backgroundColor: "#0a0a0a", color: "#ffffff", border: "1px solid #333" }}
                 >
                   View Portfolio
-                </Button>
+                </Button> */}
                 <Button
                   asChild
                   className="flex-1 rounded-full px-4 py-2 text-sm font-medium text-black shadow transition-[box-shadow,transform,filter] active:translate-y-[1px]"
@@ -263,29 +262,6 @@ export function Pricing() {
           </Card>
         </div>
       </div>
-
-      {/* Portfolio dialogs */}
-      <ExamplesDialog
-        open={openPlan === "Starter"}
-        onOpenChange={(v) => setOpenPlan(v ? "Starter" : null)}
-        planName="Starter Package"
-        price={PRICES[currency].starter}
-        videoIds={starterExamples}
-      />
-      <ExamplesDialog
-        open={openPlan === "Professional"}
-        onOpenChange={(v) => setOpenPlan(v ? "Professional" : null)}
-        planName="Professional Package"
-        price={PRICES[currency].professional}
-        videoIds={professionalExamples}
-      />
-      <ExamplesDialog
-        open={openPlan === "Enterprise"}
-        onOpenChange={(v) => setOpenPlan(v ? "Enterprise" : null)}
-        planName="Premium Package"
-        price={PRICES[currency].enterprise}
-        videoIds={enterpriseExamples}
-      />
     </section>
   )
 }

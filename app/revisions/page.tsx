@@ -5,10 +5,10 @@ export default function RevisionPolicyPage() {
   return (
     <>
       <SiteHeader />
-      <section className="bg-[#0a0a0a] text-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="legal-page">
+        <div className="shell">
           <div className="max-w-4xl mx-auto">
-            <div className="relative overflow-hidden rounded-3xl border border-neutral-800 bg-[#0f0f0f] p-6 sm:p-10 shadow-xl">
+            <div className="legal-content">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(163,230,53,0.10),transparent_55%)]" />
               <div className="relative space-y-12">
                 <header className="space-y-4">
@@ -24,9 +24,9 @@ export default function RevisionPolicyPage() {
                     Each plan includes a set number of revisions as listed in its respective tier:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-neutral-400">
-                    <li>Startup Plan: 2 revisions included</li>
-                    <li>Pro Plan: 4 revisions included</li>
-                    <li>Premium Plan: Unlimited revisions within the agreed project scope</li>
+                    <li>Starter Plan: 2 revisions included</li>
+                    <li>Professional Plan: 3 revisions included</li>
+                    <li>Enterprise Plan: Unlimited revisions within the agreed project scope</li>
                   </ul>
                 </section>
 
@@ -36,9 +36,9 @@ export default function RevisionPolicyPage() {
                     Any revisions beyond the included amount will be charged at the following hourly rates:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-neutral-400">
-                    <li>Startup Plan: $35/hour</li>
-                    <li>Pro Plan: $55/hour</li>
-                    <li>Premium Plan: $60/hour</li>
+                    <li>Starter Plan: $35/hour</li>
+                    <li>Professional Plan: $55/hour</li>
+                    <li>Enterprise Plan: $60/hour</li>
                   </ul>
                 </section>
 
@@ -62,7 +62,7 @@ export default function RevisionPolicyPage() {
                     For questions regarding our revision policy, please contact us at:
                   </p>
                   <p className="text-neutral-300">
-                    Email: <a href="mailto:hello@theskitbit.com" className="text-lime-300 underline">hello@theskitbit.com</a>
+                    Email: <a href="mailto:amrabdelwahed00@gmail.com" className="text-lime-300 underline">amrabdelwahed00@gmail.com</a>
                   </p>
                 </section>
               </div>

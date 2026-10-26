@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: "export",
+  trailingSlash: true,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
 }
 
 export default nextConfig

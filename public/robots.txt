@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /privacy
+Disallow: /terms
+Disallow: /t&c
+
+Sitemap: https://amrabdelwahed.github.io/Node7/sitemap.xml
