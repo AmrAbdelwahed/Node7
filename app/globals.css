@@ -99,6 +99,9 @@ em { color: var(--accent); font-style: normal; }
 .footer-main em { color: #48612a; }
 .footer-main .button-primary { background: #161911; color: #f2f5e8; }
 .footer-main .button-primary:hover { background: #3b4a31; }
+.footer-contact { margin: 22px 0 0; font-size: .85rem; color: #354527; }
+.footer-contact a { font-weight: 700; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.footer-contact a:hover { color: #161911; }
 .footer-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-block: 28px; border-top: 1px solid #83ac49; }
 .footer-bottom p, .footer-bottom small { color: #354527; font-size: .8rem; }
 .footer-bottom nav { display: flex; gap: 24px; margin-left: auto; font-size: .8rem; font-weight: 650; }

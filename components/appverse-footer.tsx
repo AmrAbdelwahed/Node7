@@ -10,6 +10,7 @@ export function AppverseFooter() {
         <p className="eyebrow">Have a project in mind?</p>
         <h2>Let's make your next website <em>matter.</em></h2>
         <a className="button button-primary" href={bookingUrl} target="_blank" rel="noopener noreferrer">Book a consultation <ArrowUpRight size={18} aria-hidden="true" /></a>
+        <p className="footer-contact">Prefer email? <a href="mailto:amrabdelwahed00@gmail.com">amrabdelwahed00@gmail.com</a></p>
       </div>
       <div className="shell footer-bottom">
         <Link href="/" className="footer-brand">Node7<span>.</span></Link>

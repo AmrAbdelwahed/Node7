@@ -56,7 +56,7 @@ export default function Page() {
 
         <section id="work" className="section shell" aria-labelledby="work-heading">
           <div className="section-intro work-intro">
-            <p className="eyebrow">Our perspective</p>
+            <p className="eyebrow">Design studies</p>
             <h2 id="work-heading">Made for the way people actually browse.</h2>
             <p>Clear on a phone. Convincing on a desktop. Easy to navigate everywhere in between.</p>
           </div>
@@ -70,7 +70,7 @@ export default function Page() {
               <figcaption>Built with intention</figcaption>
             </figure>
           </div>
-          <p className="work-note">Images illustrate our design approach. Client case studies can be added when approved work is available.</p>
+          <p className="work-note">Concept studies showing our approach to responsive layouts and early design thinking.</p>
         </section>
 
         <section id="process" className="section process-section shell" aria-labelledby="process-heading">
@@ -83,7 +83,7 @@ export default function Page() {
         </section>
 
         <section id="pricing" className="section shell" aria-labelledby="pricing-heading">
-          <div className="section-intro"><p className="eyebrow">Investment</p><h2 id="pricing-heading">A starting point for your project.</h2><p>Indicative project ranges in CAD. We’ll confirm scope, timing, and a final quote together.</p></div>
+          <div className="section-intro"><p className="eyebrow">Investment</p><h2 id="pricing-heading">A starting point for your project.</h2><p>Indicative project ranges in CAD. Tell us what you need, and we’ll recommend a scope and send a clear proposal.</p></div>
           <div className="pricing-grid">
             {plans.map((plan) => <article className="plan" key={plan.name}>
               <h3>{plan.name}</h3><p className="plan-price">{plan.price} <small>CAD</small></p>
